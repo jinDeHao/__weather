@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link type="text/css" rel="stylesheet" href="../static/style/0-page.css">
+    <link type="text/css" rel="stylesheet" href="../static/style/dashboard.css">
+    <link type="text/css" rel="stylesheet" href="../static/style/menu.css">
+    <link type="text/css" rel="stylesheet" href="../static/style/weekly_stat.css">
+    <link type="text/css" rel="stylesheet" href="../static/style/media.css">
+
+</head>
+
+<body>
+    <div class="page">
+        <section class="menu">
+            <img src="static/images/menu.png">
+        </section>
+        <section class="dashboard">
+            <div class="search">
+                <input type="text" placeholder="Search for city" id="city-input" name="city-input">
+            </div>
+            <div class="general">
+                <div>
+                    <h1>{{ weather["name"] }}</h1>
+                    <p>{{ weather["text"] }}</p>
+                    <h1>{{ weather["temp_c"] }}</h1>
+
+                </div>
+                <img src="{{ 'static/images/{}.png'.format(weather['condition']) }}">
+            </div>
+            <div class="special">
+                {% for hour in weather["day"] %}
+                <article>
+                    <p>{{ hour }}</p>
+                    <img src="{{ 'static/images/{}.png'.format(weather['day'][hour]['condition']) }}">
+                    <h2>{{ weather["day"][hour]["temp_c"] }}</h2>
+                </article>
+                {% endfor %}
+            </div>
+            <div class="extra">
+                <div>
+                    <article>{{ weather["feelslike_c"] }}</article>
+                    <article>{{ weather["wind_kph"] }}</article><br>
+                </div>
+                <div>
+                    <article>{{ weather["text"] }}</article>
+                    <article>{{ weather["uv"] }}</article>
+                </div>
+            </div>
+        </section>
+        <section class="weekly_stat">
+            {% for day in weather["weekly"] %}
+            <article class="day">
+                {% if day["day_name"] == "today" %}
+                <div class="day_status" id="day_name">{{ day["day_name"] }}</div>
+                {% else %}
+                <div class="day_status" id="day_name">{{ day["day_name"][:3] }}</div>
+                {% endif %}
+                <img src="{{ 'static/images/{}.png'.format(day['condition']) }}">
+                {% if day["condition"]|length > 20 %}
+                <div class="scrollable_status" id="status">{{ day["condition"][:15] }}...
+                </div>
+                {% else %}
+                <div class="status" id="status">{{ day["condition"] }}
+                </div>
+                {% endif %}
+                <div class="high_low" id="high_low">{{ day["temp_c"][1] }}/{{ day["temp_c"][0] }}</div>
+            </article>
+            {% endfor %}
+        </section>
+    </div>
+    <script type="text/javascript" src="static/script/0-scr.js"></script>
+</body>
+
+</html>

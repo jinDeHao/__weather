@@ -1,0 +1,129 @@
+/* 
+
+.nopage {
+    margin: 5.37%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.dashboard_no_ip {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard_no_ip .about {
+    color: rgb(0, 145, 255);
+    opacity: 30%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.search_no_ip {
+    background-color: rgb(0, 255, 106);
+    border-radius: 8px;
+    height: 60px;
+    width: 120%;
+}
+
+.search_no_ip input {
+    font-size: 14px;
+    width: 50%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: inherit;
+    border: inherit;
+    border-radius: inherit;
+    outline: none;
+    padding-left: 30px;
+    padding-top: 3.5%;
+}
+
+.general {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.general h1 {
+    padding-top: 13px;
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.general img {
+    width: 30%;
+}
+
+.dashboard #city-input {
+    height: 30px;
+    border-radius: 8px;
+    border: inherit;
+} */
+
+.all {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+img {
+    width: 2%;
+}
+
+.nopage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin: 20.3%;
+    margin-bottom: 22.5%;
+    margin-top: 17%;
+}
+
+
+@keyframes font_color {
+    0% {
+        color: rgb(0, 255, 136);
+    }
+
+    50% {
+        color: rgb(0, 255, 55);
+    }
+
+    100% {
+        color: rgb(0, 255, 136);
+    }
+}
+
+.general {
+    animation: font_color 2s linear infinite;
+    -webkit-text-stroke: 1px #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.general img {
+    width: 9%;
+}
+
+
+.search_no_ip input {
+    font-size: 14px;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: rgb(0, 255, 106);
+    background-image: linear-gradient(rgb(0, 255, 106), rgb(0, 255, 149));
+    border-radius: 8px;
+    border: inherit;
+    outline: none;
+    padding: 10px;
+}

@@ -1,0 +1,18 @@
+.menu {
+    background-repeat: no-repeat;
+    /* border: solid 1px white; */
+    background-color: rgb(0, 255, 106);
+    border-radius: 8px;
+    width: 50px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.menu img {
+    opacity: 0.5;
+    width: 70%;
+}
+
+.menu img:hover {
+    opacity: 40%;
+}

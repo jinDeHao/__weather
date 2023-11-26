@@ -1,0 +1,53 @@
+.weekly_stat {
+    /* border: solid 1px white; */
+    background-color: rgb(0, 255, 106);
+    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 30%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65vh;
+}
+
+.weekly_stat .day {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weekly_stat .day .day_status {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    width: 20%;
+}
+
+.weekly_stat img {
+    width: 10%;
+}
+
+.weekly_stat .status {
+    width: 40px;
+}
+
+.scrollable_status {
+    width: 40px;
+    height: 40px;
+    /* overflow-y: scroll; */
+    /* Enable horizontal scrolling */
+    /* white-space: nowrap; */
+    /* overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    -ms-overflow-style: none; */
+}
+
+
+
+
+.weekly_stat .high_low {
+    width: 40px;
+}

@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+}
+
+@keyframes move {
+    0% {
+        background-image: linear-gradient(#00ffb3e7, #00ff80dc);
+    }
+
+    50% {
+        background-image: linear-gradient(#00ff80dc, #00ffb3e7);
+    }
+
+    100% {
+        background-image: linear-gradient(#00ffb3e7, #00ff80dc);
+    }
+}
+
+
+body {
+    margin: 0;
+    background-image: linear-gradient(#00ffb3e7, #00ff80);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: small;
+    /* animation: move 10s linear infinite; */
+}
+
+
+.page {
+    margin: 5.37%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+}
