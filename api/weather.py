@@ -14,7 +14,6 @@ app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1)
 @app.route('/')
 def auto():
     # client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
-    print(request.headers)
     client_ip = request.remote_addr
     city = getcity(client_ip)
     weather = getweather(city)
