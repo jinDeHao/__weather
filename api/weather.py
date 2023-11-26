@@ -2,8 +2,13 @@ from flask import Flask, Blueprint, make_response, render_template, request
 from flask_cors import CORS
 import requests
 from .units.city import getcity, getweather
+from werkzeug.middleware.proxy_fix import ProxyFix
 app = Flask(__name__)
 app.url_map.strict_slashes = False
+
+
+# Use the ProxyFix middleware to get the real client IP address
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1)
 
 
 @app.route('/')
