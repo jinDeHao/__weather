@@ -15,7 +15,6 @@ def getcity(ip):
 def getweather(city, language="en"):
     res = requests.get(
         "https://api.weatherapi.com/v1/forecast.json?key=826454625a09464da3730135232411&q={}&lang={}&days=7".format(city, language))
-    print(res.status_code)
     if res.status_code != 200:
         return {}
     weather = res.json()
@@ -85,5 +84,4 @@ def getweather(city, language="en"):
                          str(day['day']["mintemp_f"]).split('.')[0])]})
         week[0]['day_name'] = 'today'
     obj['weekly'] = week
-    print(obj)
     return obj

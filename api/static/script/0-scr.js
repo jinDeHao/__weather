@@ -4,6 +4,6 @@ document.addEventListener('keydown', function (event) {
   if (event.key === 'Enter') {
     console.log(city.value);
     // Redirect to the specified URL
-    window.location.href = `http://127.0.0.1:5000/${city.value}`;
+    window.location.href = `https://www.dehao.tech/weather/${city.value}`;
   }
 });
