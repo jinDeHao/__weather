@@ -5,9 +5,10 @@ from .units.city import getcity, getweather
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 
+
 @app.route('/')
 def auto():
-    client_ip = request.remote_addr
+    client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
     city = getcity(client_ip)
     weather = getweather(city)
     if weather == {}:
@@ -18,13 +19,13 @@ def auto():
 @app.route('/<city>')
 def status_ok(city=""):
     print(city)
-    if city == "":
-        client_ip = request.remote_addr
-        city = getcity(client_ip)
-        weather = getweather(city)
-        if weather == {}:
-            return render_template('no_ip.html')
-        return render_template('weather.html',  weather=weather)
+    # if city == "":
+    #     client_ip = request.remote_addr
+    #     city = getcity(client_ip)
+    #     weather = getweather(city)
+    #     if weather == {}:
+    #         return render_template('no_ip.html')
+    #     return render_template('weather.html',  weather=weather)
     weather = getweather(city)
     if weather == {}:
         return render_template('no_ip.html')
