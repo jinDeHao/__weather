@@ -5,10 +5,12 @@ from datetime import datetime
 def getcity(ip):
     # location = requests.get(
     #     "https://api.ipgeolocation.io/ipgeo?apiKey=a48546dd2cbd4078bba83832fdc62b6e&ip=105.158.18.79").json()
+    print(ip)
     location = requests.get(
         "http://ip-api.com/json/?fields=61439&ip={}".format(ip)).json()
     if "city" not in location:
         return ""
+    print(location['city'])
     return location['city']
 
 
