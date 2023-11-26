@@ -25,4 +25,12 @@
         display: none;
 
     }
+
+    .nopage img {
+        display: none;
+    }
+
+    .nopage {
+        margin-bottom: 120%;
+    }
 }
