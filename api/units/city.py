@@ -10,7 +10,6 @@ def getcity(ip):
         "http://ip-api.com/json/?fields=61439&ip={}".format(ip)).json()
     if "city" not in location:
         return ""
-    print(location['city'])
     return location['city']
 
 
@@ -86,5 +85,4 @@ def getweather(city, language="en"):
                          str(day['day']["mintemp_f"]).split('.')[0])]})
         week[0]['day_name'] = 'today'
     obj['weekly'] = week
-    print(obj)
     return obj
