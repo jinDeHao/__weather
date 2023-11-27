@@ -33,3 +33,7 @@ body {
     align-items: stretch;
     justify-content: space-between;
 }
+
+#nondispaly {
+    display: none;
+}

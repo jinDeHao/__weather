@@ -22,8 +22,17 @@
     }
 
     .menu {
-        display: none;
+        position: absolute;
+        left: 7%;
+        top: 2%;
+        padding: 5px;
+        /* justify-self: left; */
+        /* display: none; */
 
+    }
+
+    .setting {
+        width: 700%;
     }
 
     .nopage img {

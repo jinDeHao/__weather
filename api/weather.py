@@ -24,18 +24,20 @@ def auto():
 
 @app.route('/<city>')
 def status_ok(city=""):
-    print(city)
-    # if city == "":
-    #     client_ip = request.remote_addr
-    #     city = getcity(client_ip)
-    #     weather = getweather(city)
-    #     if weather == {}:
-    #         return render_template('no_ip.html')
-    #     return render_template('weather.html',  weather=weather)
     weather = getweather(city)
+    print(weather)
     if weather == {}:
         return render_template('no_ip.html')
     return render_template('weather.html',  weather=weather)
+
+
+# @app.route('/<city>')
+# def status_ok(city=""):
+#     weather = getweather(city)
+#     print(weather)
+#     if weather == {}:
+#         return render_template('no_ip.html')
+#     return render_template('weather.html',  weather=weather)
 
 
 if __name__ == "__main__":
