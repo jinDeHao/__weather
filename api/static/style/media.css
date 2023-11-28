@@ -1,46 +1,64 @@
 @media only screen and (max-width: 800px) {
-    .page {
-        margin: 5.37%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  body {
+    height: 100%;
+  }
 
-    .dashboard,
-    .weekly_stat {
-        width: 95%;
-        margin: 30px;
-        /* margin-left: 70px;
-        margin-right: 70px; */
-    }
+  .page {
+    margin: 5.37%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .special {
-        /* justify-content: space-between; */
-        margin-bottom: 20px;
-        height: 90px;
-    }
-
-    .menu {
-        position: absolute;
-        left: 7%;
-        top: 2%;
-        padding: 5px;
-        /* justify-self: left; */
-        /* display: none; */
-
-    }
-
+  .icon:active {
     .setting {
-        padding-right: 100%;
-        width: 700%;
+      display: block;
     }
+  }
 
-    .nopage img {
-        display: none;
-    }
+  .dashboard,
+  .weekly_stat {
+    width: 95%;
+    margin: 30px;
+    /* margin-left: 70px;
+        margin-right: 70px; */
+  }
 
-    .nopage {
-        margin-bottom: 120%;
-    }
+  .special {
+    /* justify-content: space-between; */
+    margin-bottom: 20px;
+    height: 90px;
+  }
+
+  .menu {
+    position: absolute;
+    left: 7%;
+    top: 2%;
+    padding: 5px;
+    /* justify-self: left; */
+    /* display: none; */
+
+  }
+
+  .setting {
+    padding-right: 100%;
+    width: 700%;
+  }
+
+  .nopage img {
+    display: none;
+  }
+
+  .nopage {
+    margin-bottom: 120%;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .special {
+    padding-left: 5%;
+    padding-right: 5%;
+    /* border: solid; */
+  }
 }

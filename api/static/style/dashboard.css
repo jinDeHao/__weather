@@ -79,6 +79,7 @@
     height: 30%;
 }
 
+
 .special::-webkit-scrollbar {
     width: 0px;
 }
@@ -102,10 +103,11 @@
     justify-content: space-around;
 }
 
-.extra div {
+.extra .statistic {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    /* justify-content: space-around; */
 }
 
 .extra div * {

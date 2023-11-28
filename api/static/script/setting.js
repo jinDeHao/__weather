@@ -1,5 +1,9 @@
 /* global $ */
-
+let load = document.getElementById("loading");
+load.removeAttribute('id');
+console.log("log safe");
+let page = document.getElementById("nonpage");
+page.removeAttribute('id');
 let degree = document.getElementById("degree");
 let speed = document.getElementById("speed");
 

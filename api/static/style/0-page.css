@@ -19,6 +19,8 @@
 
 body {
     margin: 0;
+    padding: 5.37%;
+    height: 77vh;
     background-image: linear-gradient(#00ffb3e7, #00ff80);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: small;
@@ -27,13 +29,45 @@ body {
 
 
 .page {
-    margin: 5.37%;
+    /* margin-top: 5.37%; */
+    /* margin-right: 5.37%;
+    margin-left: 5.37%;
+    margin-bottom: 0%; */
+    /* border: solid; */
     display: flex;
     flex-direction: row;
     align-items: stretch;
     justify-content: space-between;
 }
 
+#loading {
+    position: absolute;
+    top: 45%;
+    left: 48%;
+    background-image: url('../images/Sunny.png');
+    background-repeat: no-repeat;
+    border: 8px solid #f3f3f3;
+    /* Light gray border */
+    border-top: 8px solid #e5ff00;
+    /* Blue border for the spinner */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 500ms linear infinite;
+    /* Apply the spin animation */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#nonpage,
 #nondispaly {
     display: none;
 }

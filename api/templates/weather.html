@@ -10,13 +10,15 @@
   <link type="text/css" rel="stylesheet" href="../static/style/menu.css">
   <link type="text/css" rel="stylesheet" href="../static/style/weekly_stat.css">
   <link type="text/css" rel="stylesheet" href="../static/style/media.css">
+  <script type="text/javascript" src="../static/script/setting.js" defer></script>
 
 </head>
 
 <body>
-  <div class="page">
+  <div id="loading"></div>
+  <div class="page" id="nonpage">
     <section class="menu">
-      <div class="icon">
+      <div class="icon" id="icon">
         <img src="static/images/menu.png">
         <div class="setting">
           <label for="degree">degree:</label>
@@ -56,13 +58,13 @@
         {% endfor %}
       </div>
       <div class="extra">
-        <div>
+        <div class="statistic">
           <article id="C°">{{ weather["feelslike_c"] }}</article>
           <article id="F°">{{ weather["feelslike_f"] }}</article>
-          <article id="kph">{{ weather["wind_kph"] }}</article><br>
-          <article id="mph">{{ weather["wind_mph"] }}</article><br>
+          <article id="kph">{{ weather["wind_kph"] }}</article>
+          <article id="mph">{{ weather["wind_mph"] }}</article>
         </div>
-        <div>
+        <div class="statistic">
           <article>{{ weather["text"] }}</article>
           <article>{{ weather["uv"] }}</article>
         </div>
@@ -91,7 +93,6 @@
     </section>
   </div>
   <script type="text/javascript" src="static/script/0-scr.js"></script>
-  <script type="text/javascript" src="../static/script/setting.js"></script>
 </body>
 
 </html>
