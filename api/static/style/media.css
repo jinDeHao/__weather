@@ -29,6 +29,11 @@
         margin-right: 70px; */
   }
 
+
+  .dashboard {
+    width: 106%;
+  }
+
   .special {
     /* justify-content: space-between; */
     margin-bottom: 20px;
