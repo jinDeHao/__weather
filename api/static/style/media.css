@@ -11,6 +11,10 @@
     justify-content: center;
   }
 
+  .menu {
+    display: none;
+  }
+
   .icon:active {
     .setting {
       display: block;
