@@ -44,6 +44,10 @@
     margin-bottom: 5px;
 }
 
+.general h1 span {
+    font-size: 15px;
+}
+
 .general img {
     width: 30%;
 }

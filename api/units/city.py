@@ -23,6 +23,7 @@ def getweather(city, language="en"):
     weather = res.json()
     obj = {}
     obj["name"] = weather["location"]["name"]
+    obj["country"] = weather["location"]["country"].lower()
     obj["condition"] = weather["current"]["condition"]["text"]
     obj["temp_c"] = str(weather["current"]["temp_c"]).split('.')[0]
     obj["temp_c"] += 'C°'
