@@ -40,7 +40,7 @@
       </div>
       <div class="general">
         <div>
-          <h1>{{ weather["name"] }}<span>, {{ weather["country"] }}</span></h1>
+          <h1>{{ weather["name"] }}<span>, {{ weather["country"][:14] }}</span></h1>
           <p>{{ weather["text"] }}</p>
           <h1 id="C°">{{ weather["temp_c"] }}</h1>
           <h1 id="F°">{{ weather["temp_f"] }}</h1>
