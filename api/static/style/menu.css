@@ -1,7 +1,7 @@
 .menu {
     background-repeat: no-repeat;
     /* border: solid 1px white; */
-    background-color: rgb(0, 255, 106);
+    background-color: rgb(35, 54, 43);
     border-radius: 8px;
     width: 50px;
     text-align: center;
@@ -19,8 +19,8 @@
     padding: 5%;
     padding-bottom: 100%;
 
-    background-color: rgb(0, 255, 106);
-    width: 350%;
+    background-color: rgb(35, 54, 43);
+    width: 180%;
     text-align: left;
 }
 
@@ -30,6 +30,7 @@
 }
 
 select {
+    border: solid #333;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -37,7 +38,7 @@ select {
     margin-bottom: 10px;
     border-radius: 7px;
     border: none;
-    background-color: aquamarine;
+    background-color: rgb(158, 158, 158);
     color: #333;
     width: 100%;
     cursor: pointer;

@@ -48,14 +48,19 @@
         <img src="{{ 'static/images/{}.png'.format(weather['condition']) }}">
       </div>
       <div class="special">
-        {% for hour in weather["day"] %}
-        <article>
-          <p>{{ hour }}</p>
-          <img src="{{ 'static/images/{}.png'.format(weather['day'][hour]['condition']) }}">
-          <h2 id="C°">{{ weather["day"][hour]["temp_c"] }}</h2>
-          <h2 id="F°">{{ weather["day"][hour]["temp_f"] }}</h2>
-        </article>
-        {% endfor %}
+        TODAY'S FORCAST
+        <div class="articles">
+          {% for hour in weather["day"] %}
+          <article>
+            <p>{{ hour }}</p>
+            <div class="image">
+              <img src="{{ 'static/images/{}.png'.format(weather['day'][hour]['condition']) }}">
+            </div>
+            <h2 id="C°">{{ weather["day"][hour]["temp_c"] }}</h2>
+            <h2 id="F°">{{ weather["day"][hour]["temp_f"] }}</h2>
+          </article>
+          {% endfor %}
+        </div>
       </div>
       <div class="extra">
         <div class="statistic">

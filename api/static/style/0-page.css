@@ -21,8 +21,9 @@ body {
     margin: 0;
     padding: 5.37%;
     height: 77vh;
-    background-image: linear-gradient(#00ffb3e7, #00ff80);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: linear-gradient(#000000e7, #28282c);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
     font-size: small;
     /* animation: move 10s linear infinite; */
 }
